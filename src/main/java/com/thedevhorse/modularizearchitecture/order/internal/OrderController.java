@@ -1,15 +1,8 @@
 package com.thedevhorse.modularizearchitecture.order.internal;
 
-import com.thedevhorse.modularizearchitecture.product.spi.ProductService;
-import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+@RestController
 public class OrderController {
 
-    private final ProductService productService;
-
-
-    public OrderController(ProductService productService) {
-        this.productService = productService;
-    }
 }
