@@ -1,5 +1,6 @@
-package com.thedevhorse.modularizearchitecture.order.internal;
+package com.thedevhorse.modularizearchitecture.order.service;
 
+import com.thedevhorse.modularizearchitecture.order.spi.OrderService;
 import com.thedevhorse.modularizearchitecture.product.spi.ProductService;
 import org.springframework.stereotype.Service;
 
