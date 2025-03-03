@@ -1,4 +1,4 @@
 @org.springframework.modulith.ApplicationModule(
-        allowedDependencies = {"product :: spi", "order :: *"}
+        allowedDependencies = {"order :: *"}
 )
 package com.thedevhorse.modularizearchitecture.order.service;
