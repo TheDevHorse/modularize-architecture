@@ -1,6 +1,6 @@
 package com.thedevhorse.modularizearchitecture.order.spi;
 
-public interface OrderFacade {
+public interface OrderSpiFacade {
 
     void getProductById();
 }
