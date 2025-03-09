@@ -1,21 +1,23 @@
 package com.thedevhorse.modularizearchitecture.facade;
 
+import com.thedevhorse.modularizearchitecture.order.domain.Order;
 import com.thedevhorse.modularizearchitecture.order.spi.OrderSpiFacade;
 import com.thedevhorse.modularizearchitecture.product.domain.Product;
-import com.thedevhorse.modularizearchitecture.product.spi.ProductService;
+import com.thedevhorse.modularizearchitecture.product.spi.ProductSpiService;
 import org.springframework.stereotype.Component;
 
 @Component
 public class OrderFacadeImpl implements OrderSpiFacade {
 
-    private final ProductService productService;
+    private final ProductSpiService productSpiService;
 
-    public OrderFacadeImpl(ProductService productService) {
-        this.productService = productService;
+    public OrderFacadeImpl(ProductSpiService productSpiService) {
+        this.productSpiService = productSpiService;
     }
 
     @Override
-    public void getProductById() {
-        Product product = productService.getProductById();
+    public Order getProductById(String productId) {
+        Product product = productSpiService.getProductById(productId);
+        return null;
     }
 }

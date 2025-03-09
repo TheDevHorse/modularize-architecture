@@ -7,8 +7,6 @@ import org.springframework.modulith.docs.Documenter;
 
 @SpringBootTest
 class ModularizeArchitectureApplicationTests {
-
-
     @Test
     void createApplicationModuleModel() {
         ApplicationModules modules = ApplicationModules.of(ModularizeArchitectureApplication.class);
