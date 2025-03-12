@@ -1,8 +1,8 @@
 package com.thedevhorse.modularizearchitecture.order.spi;
 
-import com.thedevhorse.modularizearchitecture.order.domain.Order;
+import java.math.BigDecimal;
 
 public interface OrderSpiFacade {
 
-    Order getProductById(String productId);
+    BigDecimal getPriceByProductId(String productId);
 }
