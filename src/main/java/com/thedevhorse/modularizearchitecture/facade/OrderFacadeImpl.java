@@ -1,17 +1,17 @@
 package com.thedevhorse.modularizearchitecture.facade;
 
-import com.thedevhorse.modularizearchitecture.order.spi.OrderSpiFacade;
-import com.thedevhorse.modularizearchitecture.product.spi.ProductSpiService;
+import com.thedevhorse.modularizearchitecture.order.spi.OrderFacade;
+import com.thedevhorse.modularizearchitecture.product.spi.ProductService;
 import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
 
 @Component
-public class OrderFacadeImpl implements OrderSpiFacade {
+public class OrderFacadeImpl implements OrderFacade {
 
-    private final ProductSpiService productSpiService;
+    private final ProductService productSpiService;
 
-    public OrderFacadeImpl(ProductSpiService productSpiService) {
+    public OrderFacadeImpl(ProductService productSpiService) {
         this.productSpiService = productSpiService;
     }
 

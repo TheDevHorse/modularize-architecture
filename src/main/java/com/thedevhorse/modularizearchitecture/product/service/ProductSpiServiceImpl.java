@@ -1,13 +1,13 @@
 package com.thedevhorse.modularizearchitecture.product.service;
 
 import com.thedevhorse.modularizearchitecture.product.domain.Product;
-import com.thedevhorse.modularizearchitecture.product.spi.ProductSpiService;
+import com.thedevhorse.modularizearchitecture.product.spi.ProductService;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 
 @Service
-public class ProductSpiServiceImpl implements ProductSpiService {
+public class ProductSpiServiceImpl implements ProductService {
 
     @Override
     public Product getProductById(String productId) {
