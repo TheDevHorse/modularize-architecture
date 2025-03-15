@@ -5,16 +5,16 @@ import java.math.BigDecimal;
 public class Payment {
 
     private BigDecimal price;
-    private String cardNumber;
+    private final Long cardNumber;
 
     private Payment(BigDecimal price,
-                    String cardNumber) {
+                    Long cardNumber) {
         this.price = price;
         this.cardNumber = cardNumber;
     }
 
     public static Payment create(BigDecimal price,
-                          String cardNumber) {
+                                 Long cardNumber) {
         return new Payment(
                 price,
                 cardNumber
@@ -25,7 +25,7 @@ public class Payment {
         return price;
     }
 
-    public String cardNumber() {
+    public Long cardNumber() {
         return cardNumber;
     }
 }

@@ -6,5 +6,5 @@ public interface OrderFacade {
 
     BigDecimal getPriceByProductId(String productId);
 
-    void executePayment(BigDecimal price, String cardNumber);
+    void executePayment(BigDecimal price, Long cardNumber);
 }

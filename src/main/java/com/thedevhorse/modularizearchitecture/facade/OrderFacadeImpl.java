@@ -28,7 +28,7 @@ public class OrderFacadeImpl implements OrderFacade {
     }
 
     @Override
-    public void executePayment(BigDecimal price, String cardNumber) {
+    public void executePayment(BigDecimal price, Long cardNumber) {
         paymentService.executePayment(
                 Payment.create(
                         price,

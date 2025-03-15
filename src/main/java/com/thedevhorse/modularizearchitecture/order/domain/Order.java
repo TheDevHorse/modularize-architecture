@@ -6,11 +6,11 @@ public class Order {
 
     private final String productId;
 
-    private final String cardNumber;
+    private final Long cardNumber;
 
     private Order(String id,
                   String productId,
-                  String cardNumber) {
+                  Long cardNumber) {
         this.id = id;
         this.productId = productId;
         this.cardNumber = cardNumber;
@@ -18,7 +18,7 @@ public class Order {
 
     public static Order create(String id,
                                String productId,
-                               String cardNumber){
+                               Long cardNumber){
         return new Order(
                 id,
                 productId,
@@ -34,7 +34,7 @@ public class Order {
         return productId;
     }
 
-    public String cardNumber() {
+    public Long cardNumber() {
         return cardNumber;
     }
 }

@@ -4,8 +4,6 @@ import com.thedevhorse.modularizearchitecture.order.domain.Order;
 import com.thedevhorse.modularizearchitecture.order.spi.OrderFacade;
 import org.springframework.stereotype.Service;
 
-import java.math.BigDecimal;
-
 @Service
 public class OrderServiceImpl implements OrderService {
 
@@ -17,8 +15,9 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     public void processOrder(Order order) {
-        BigDecimal price = orderSpiFacade.getPriceByProductId(
-                order.productId()
+        orderSpiFacade.executePayment(
+                orderSpiFacade.getPriceByProductId(order.productId()),
+                order.cardNumber()
         );
     }
 }
