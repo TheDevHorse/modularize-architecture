@@ -2,17 +2,28 @@ package com.thedevhorse.modularizearchitecture.order.domain;
 
 public class Order {
 
-    private String id;
+    private final String id;
 
-    private String productId;
+    private final String productId;
 
-    private Order(String id, String productId) {
+    private final String cardNumber;
+
+    private Order(String id,
+                  String productId,
+                  String cardNumber) {
         this.id = id;
         this.productId = productId;
+        this.cardNumber = cardNumber;
     }
 
-    private static Order create(String id, String productId){
-        return new Order(id, productId);
+    public static Order create(String id,
+                               String productId,
+                               String cardNumber){
+        return new Order(
+                id,
+                productId,
+                cardNumber
+        );
     }
 
     public String id() {
@@ -21,5 +32,9 @@ public class Order {
 
     public String productId() {
         return productId;
+    }
+
+    public String cardNumber() {
+        return cardNumber;
     }
 }

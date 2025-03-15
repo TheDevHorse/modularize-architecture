@@ -1,4 +1,4 @@
 @ApplicationModule
-package com.thedevhorse.modularizearchitecture.product;
+package com.thedevhorse.modularizearchitecture.payment;
 
 import org.springframework.modulith.ApplicationModule;

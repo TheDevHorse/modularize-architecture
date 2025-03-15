@@ -1,6 +1,8 @@
 package com.thedevhorse.modularizearchitecture.facade;
 
 import com.thedevhorse.modularizearchitecture.order.spi.OrderFacade;
+import com.thedevhorse.modularizearchitecture.payment.domain.Payment;
+import com.thedevhorse.modularizearchitecture.payment.spi.PaymentService;
 import com.thedevhorse.modularizearchitecture.product.spi.ProductService;
 import org.springframework.stereotype.Component;
 
@@ -9,15 +11,29 @@ import java.math.BigDecimal;
 @Component
 public class OrderFacadeImpl implements OrderFacade {
 
-    private final ProductService productSpiService;
+    private final ProductService productService;
 
-    public OrderFacadeImpl(ProductService productSpiService) {
-        this.productSpiService = productSpiService;
+    private final PaymentService paymentService;
+
+    public OrderFacadeImpl(ProductService productService,
+                           PaymentService paymentService) {
+        this.productService = productService;
+        this.paymentService = paymentService;
     }
 
     @Override
     public BigDecimal getPriceByProductId(String productId) {
-        return productSpiService.getProductById(productId)
+        return productService.getProductById(productId)
                 .price();
+    }
+
+    @Override
+    public void executePayment(BigDecimal price, String cardNumber) {
+        paymentService.executePayment(
+                Payment.create(
+                        price,
+                        cardNumber
+                )
+        );
     }
 }

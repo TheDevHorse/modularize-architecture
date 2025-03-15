@@ -12,6 +12,7 @@ public class ProductSpiServiceImpl implements ProductService {
     @Override
     public Product getProductById(String productId) {
         return Product.create(
+                productId,
                 BigDecimal.valueOf(2.0)
         );
     }

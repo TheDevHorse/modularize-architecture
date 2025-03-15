@@ -17,6 +17,8 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     public void processOrder(Order order) {
-        BigDecimal price = orderSpiFacade.getPriceByProductId(order.productId());
+        BigDecimal price = orderSpiFacade.getPriceByProductId(
+                order.productId()
+        );
     }
 }

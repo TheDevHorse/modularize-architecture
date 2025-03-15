@@ -4,14 +4,26 @@ import java.math.BigDecimal;
 
 public class Product {
 
-    private final BigDecimal price;
+    private String id;
 
-    private Product(BigDecimal price){
+    private BigDecimal price;
+
+    private Product(String id,
+                    BigDecimal price) {
+        this.id = id;
         this.price = price;
     }
 
-    public static Product create(BigDecimal price) {
-        return new Product(price);
+    public static Product create(String id,
+                                 BigDecimal price) {
+        return new Product(
+                id,
+                price
+        );
+    }
+
+    public String id() {
+        return id;
     }
 
     public BigDecimal price() {

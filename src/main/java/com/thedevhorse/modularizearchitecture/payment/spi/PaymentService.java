@@ -1,4 +1,8 @@
 package com.thedevhorse.modularizearchitecture.payment.spi;
 
-public class PaymentService {
+import com.thedevhorse.modularizearchitecture.payment.domain.Payment;
+
+public interface PaymentService {
+
+    void executePayment(Payment payment);
 }
