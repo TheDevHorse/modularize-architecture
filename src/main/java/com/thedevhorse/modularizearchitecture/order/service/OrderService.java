@@ -4,5 +4,5 @@ import com.thedevhorse.modularizearchitecture.order.domain.Order;
 
 public interface OrderService {
 
-    void processOrder(Order order);
+    String processOrder(Order order);
 }

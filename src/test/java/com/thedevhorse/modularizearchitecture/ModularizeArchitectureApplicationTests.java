@@ -15,4 +15,5 @@ class ModularizeArchitectureApplicationTests {
                 .writeDocumentation()
                 .writeIndividualModulesAsPlantUml();
     }
+
 }
