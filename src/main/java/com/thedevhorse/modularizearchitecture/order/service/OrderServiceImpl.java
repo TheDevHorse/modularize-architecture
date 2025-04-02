@@ -2,26 +2,23 @@ package com.thedevhorse.modularizearchitecture.order.service;
 
 import com.thedevhorse.modularizearchitecture.order.domain.Order;
 import com.thedevhorse.modularizearchitecture.order.spi.OrderFacade;
-import com.thedevhorse.modularizearchitecture.product.domain.Product;
 import org.springframework.stereotype.Service;
-
-import java.math.BigDecimal;
 
 import static java.lang.String.format;
 
 @Service
 public class OrderServiceImpl implements OrderService {
 
-    private final OrderFacade orderSpiFacade;
+    private final OrderFacade orderFacade;
 
-    public OrderServiceImpl(OrderFacade orderSpiFacade) {
-        this.orderSpiFacade = orderSpiFacade;
+    public OrderServiceImpl(OrderFacade orderFacade) {
+        this.orderFacade = orderFacade;
     }
 
     @Override
     public String processOrder(Order order) {
-        orderSpiFacade.executePayment(
-                orderSpiFacade.getPriceByProductId(order.productId()),
+        orderFacade.executePayment(
+                orderFacade.getPriceByProductId(order.productId()),
                 order.cardNumber()
         );
         return format("Order completed successfully for order id : %s", order.id());
