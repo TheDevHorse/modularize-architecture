@@ -13,7 +13,7 @@ public class PaymentServiceImpl implements PaymentService {
 
     @Override
     public void executePayment(Payment payment) {
-        logger.info("Payment of {} processed successfully for card ending with: {}",
+        logger.info("Payment of {} processed successfully for card number: {}",
                 payment.price(),
                 payment.cardNumber()
         );
