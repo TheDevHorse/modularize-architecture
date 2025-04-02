@@ -2,7 +2,10 @@ package com.thedevhorse.modularizearchitecture.order.service;
 
 import com.thedevhorse.modularizearchitecture.order.domain.Order;
 import com.thedevhorse.modularizearchitecture.order.spi.OrderFacade;
+import com.thedevhorse.modularizearchitecture.product.domain.Product;
 import org.springframework.stereotype.Service;
+
+import java.math.BigDecimal;
 
 import static java.lang.String.format;
 
