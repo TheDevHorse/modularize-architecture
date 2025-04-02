@@ -35,7 +35,7 @@ This architecture can evolve into a **vertical slice** model, where each module 
 
 ### Project Summary
 
-This project follows a modular package structure, separating each business domain (`payment`, `product`) into isolated modules with a clear internal organization:
+This project follows a modular package structure, separating each business domain (`payment`, `product`, `order`) into isolated modules with a clear internal organization:
 
 - `domain` contains core domain entities.
 - `spi` exposes service interfaces for module interaction.
