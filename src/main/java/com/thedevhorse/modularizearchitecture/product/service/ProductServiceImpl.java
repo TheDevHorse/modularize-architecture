@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import java.math.BigDecimal;
 
 @Service
-public class ProductSpiServiceImpl implements ProductService {
+public class ProductServiceImpl implements ProductService {
 
     @Override
     public Product getProductById(String productId) {
