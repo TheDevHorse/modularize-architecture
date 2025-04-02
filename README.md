@@ -40,7 +40,6 @@ This project follows a modular package structure, separating each business domai
 - `domain` contains core domain entities.
 - `spi` exposes service interfaces for module interaction.
 - `service` holds the implementation of business logic.
-- Each module includes a `package-info.java` file, which marks it as an `ApplicationModule` and to define the `NameInterface`.
 
 A centralized **Facade** coordinates communication between modules, ensuring a clean and loosely coupled system design.
 
