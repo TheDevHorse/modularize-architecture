@@ -72,7 +72,7 @@ com.thedevhorse.modularizearchitecture
 
 ## C4 Diagram
 
-📌 **[Insert C4 Model Image Here]**
+![img.png](img.png)
 
 This diagram should visualize module dependencies, showing how each domain interacts through SPI layers and how the facade orchestrates communication across the system.
 

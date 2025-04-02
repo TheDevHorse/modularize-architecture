@@ -1,8 +1,8 @@
 package com.thedevhorse.modularizearchitecture;
 
-import com.thedevhorse.modularizearchitecture.facade.OrderFacadeImpl;
 import com.thedevhorse.modularizearchitecture.order.domain.Order;
 import com.thedevhorse.modularizearchitecture.order.service.OrderService;
+import com.thedevhorse.modularizearchitecture.order.spi.OrderFacade;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -19,7 +19,7 @@ import static org.mockito.Mockito.when;
 class OrderServiceTest {
 
     @MockitoBean
-    private OrderFacadeImpl orderFacade;
+    private OrderFacade orderFacade;
 
     @Autowired
     private OrderService orderService;
