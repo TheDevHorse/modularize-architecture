@@ -44,32 +44,6 @@ This project follows a modular package structure, separating each business domai
 
 A centralized **Facade** coordinates communication between modules, ensuring a clean and loosely coupled system design.
 
-```
-com.thedevhorse.modularizearchitecture
-│
-├── payment
-│   ├── domain
-│   │   ├── package-info.java (NameInterface)
-│   │   └── Payment.java
-│   ├── service
-│   │   └── PaymentServiceImpl.java
-│   ├── spi
-│   │   ├── PaymentService.java
-│   │   └── package-info.java (NameInterface)
-│   └── package-info.java (ApplicationModule)
-│
-├── product
-│   ├── domain
-│   │   ├── package-info.java (NameInterface)
-│   │   └── Product.java
-│   ├── service
-│   │   └── ProductServiceImpl.java
-│   ├── spi
-│   │   ├── ProductService.java
-│   │   └── package-info.java (NameInterface)
-│   └── package-info.java (ApplicationModule)
-```
-
 ## C4 Diagram
 
 ![img.png](img.png)
