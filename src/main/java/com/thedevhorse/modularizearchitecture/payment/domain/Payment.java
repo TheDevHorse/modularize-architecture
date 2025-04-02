@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 
 public class Payment {
 
-    private BigDecimal price;
+    private final BigDecimal price;
     private final Long cardNumber;
 
     private Payment(BigDecimal price,
